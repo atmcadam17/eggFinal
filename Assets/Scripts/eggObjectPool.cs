@@ -17,7 +17,7 @@ public class eggObjectPool : MonoBehaviour
         {
             var newEgg = Instantiate(_eggPrefab);
             newEgg.transform.position = gameObject.transform.position;
-            newEgg.GetComponent<Rigidbody>().isKinematic = true; // makes it so the eggs dont move before theyre spawned
+            newEgg.SetActive(false); // makes it so the eggs dont move before theyre spawned
             
             _eggList[i] = newEgg;
         }
@@ -48,7 +48,7 @@ public class eggObjectPool : MonoBehaviour
         
             // do the actual "spawning" stuff ! move it & turn kinematic off
             _eggList[eggIndex].transform.position = pos;
-            _eggList[eggIndex].GetComponent<Rigidbody>().isKinematic = false;
+            _eggList[eggIndex].SetActive(true);
             
             // switch which list the egg is on
             _usedEggs.Add(_eggList[eggIndex]);
@@ -62,5 +62,11 @@ public class eggObjectPool : MonoBehaviour
             Debug.Log("out of eggs");
             return null;
         }
+    }
+
+    public void DestroyEgg(GameObject egg)
+    {
+        _usedEggs.Remove(egg);
+        egg.gameObject.SetActive(false);
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 // when egg spawns, material randomizes
 public class randomizeColor : MonoBehaviour
 {
-    [SerializeField] private List<Material> _shellList;
+    public List<Material> _shellList;
     
-    [SerializeField] private Material _rareShell;
+    public Material _rareShell;
     [SerializeField] private int _rarityPercent; // chance out of a hundred
     
     void Start()
@@ -18,10 +18,11 @@ public class randomizeColor : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().material = _rareShell;
         }
-        else
+        else // otherwise change color to one of the regular ones
         {
-            var newColor = Random.Range(0, _shellList.Count);
-            gameObject.GetComponent<MeshRenderer>().material = _shellList[newColor];
+            var index = Random.Range(0, _shellList.Count);
+            this.GetComponent<eggCrack>().eggColorIndex = index;
+            gameObject.GetComponent<MeshRenderer>().material = _shellList[index];
         }
     }
 }

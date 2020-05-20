@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4478080731451835133}
   - component: {fileID: 369809435}
   - component: {fileID: 369809436}
+  - component: {fileID: 9055549128578829364}
   m_Layer: 0
   m_Name: egg
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8003564788296769341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.979496, y: 2.4775918, z: 5.6227474}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.24}
+  m_LocalScale: {x: 0.3, y: 0.4, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,7 +106,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -129,4 +130,20 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 3efbfad5396fe4b22bc4c9968eabde50, type: 2}
   - {fileID: 2100000, guid: 56052849697d14789bbc3adb374bef9f, type: 2}
   _rareShell: {fileID: 2100000, guid: d3811a5eb8ed745978aa5fb826f1bef1, type: 2}
-  _rarityPercent: 0
+  _rarityPercent: 2
+  _newcolorIndex: 0
+--- !u!114 &9055549128578829364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003564788296769341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33387f5b41bb4cce80eaf8986e6afef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _brokenEggPrefab: {fileID: 2620515423601791649, guid: 4040423b5864b4b3fa92546e37f64597,
+    type: 3}
+  _magnitudeThreshold: 2
