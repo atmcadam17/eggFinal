@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 // basic script to make camera follow player
+// not being used currently
 
 [RequireComponent(typeof(Camera))]
 

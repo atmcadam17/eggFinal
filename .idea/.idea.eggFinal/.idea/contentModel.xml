@@ -10,8 +10,8 @@
           <e p="customizeColor.cs" t="Include" />
           <e p="eggCrack.cs" t="Include" />
           <e p="eggObjectPool.cs" t="Include" />
-          <e p="inheritColor.cs" t="Include" />
           <e p="randomizeColor.cs" t="Include" />
+          <e p="stoveController.cs" t="Include" />
           <e p="switchCamera.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">

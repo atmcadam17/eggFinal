@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// makes the egg break when it hits a surface with a high enough magnitude
 public class eggCrack : MonoBehaviour
 {
     private Rigidbody _rb;
@@ -36,8 +37,6 @@ public class eggCrack : MonoBehaviour
     {
         // create a new broken egg with same color shell
         var newCrackedEgg = Instantiate(_brokenEggPrefab);
-        Debug.Log("egg color index: " + eggColorIndex);
-        newCrackedEgg.GetComponent<inheritColor>().InheritColor(eggColorIndex);
         
         // move it to the right location
         newCrackedEgg.transform.position = this.transform.position;
